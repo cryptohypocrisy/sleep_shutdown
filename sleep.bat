@@ -1,6 +1,7 @@
 @echo off
 echo.
-
+echo The PsShutdown Program
+echo.
 SET /P choice=Sleep, Shutdown or Abort (sl/sh/a)? 
 IF %choice% NEQ a (
 	SET minutes=...
