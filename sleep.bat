@@ -3,8 +3,8 @@ echo.
 echo The PsShutdown Program
 echo.
 echo.
-SET /P choice=Sleep, Shutdown or Abort (sl/sh/a)? 
-IF %choice% NEQ a (
+SET /P choice=Sleep, Shutdown or Abort (1/2/3)? 
+IF %choice% NEQ 3 (
 	SET minutes=...
 	SET /P minutes=In how many minutes? 
 	SET /A seconds="60*minutes"
@@ -12,15 +12,15 @@ IF %choice% NEQ a (
 
 echo.
 
-IF %choice%==sl (
+IF %choice%==1 (
 	psshutdown -d -t %seconds%
 	echo.
 )
-IF %choice%==sh (
+IF %choice%==2 (
 	psshutdown -k -t %seconds%
 	echo.
 )
-if %choice%==a (
+if %choice%==3 (
 	psshutdown -a
 	echo.
 )
